@@ -105,6 +105,11 @@ const router = createRouter({
       component: () => import('@/views/hermes/LogsView.vue'),
     },
     {
+      path: '/hermes/butler',
+      name: 'hermes.butler',
+      component: () => import('@/views/hermes/ButlerView.vue'),
+    },
+    {
       path: '/hermes/usage',
       name: 'hermes.usage',
       component: () => import('@/views/hermes/UsageView.vue'),

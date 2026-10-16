@@ -1,8 +1,10 @@
 import { themePresetMessages } from '../theme-preset-locales'
+import { butlerMessages } from '../butler-locales'
 import { themeAppearanceMessages } from '../theme-appearance-locales'
 import { socialMessagesJa } from '../social-messages-locales'
 
 export default {
+  butler: butlerMessages.ja,
   jev: {
     browserAutomation: "内蔵ブラウザーの自動化",
     browserAutomationHint: "このプロファイルに保存した JEV 接続を使用し、次の判定から適用します。画面上のラベルを JEV に送信しますが、入力値は含みません。無効時、利用不可時、判定が不確かな場合は従来の処理を維持します。",

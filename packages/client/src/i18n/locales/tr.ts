@@ -1,4 +1,5 @@
 import { themePresetMessages } from '../theme-preset-locales'
+import { butlerMessages } from '../butler-locales'
 import { themeAppearanceMessages } from '../theme-appearance-locales'
 const writeApprovalMessages = {
   writeApprovalTitle: 'Bekleyen yazma onayları',
@@ -29,6 +30,7 @@ const writeApprovalMessages = {
 }
 
 export default {
+  butler: butlerMessages.tr,
   changelog: {
     new_0_7_36_1: 'Arayüz bölgelerine göre arka plan, opaklık, bulanıklık, köşe, kenarlık ve gölgeler için canlı tema özelleştirmesi eklendi (#3394)',
     new_0_7_36_2: 'Oluşturma, çoğaltma, değiştirme, içe aktarma, dışa aktarma ve hesap başına kaydetme destekli adlandırılmış temalar eklendi (#3394)',

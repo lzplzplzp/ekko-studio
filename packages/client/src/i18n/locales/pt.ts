@@ -1,8 +1,10 @@
 import { themePresetMessages } from '../theme-preset-locales'
+import { butlerMessages } from '../butler-locales'
 import { themeAppearanceMessages } from '../theme-appearance-locales'
 import { socialMessagesPt } from '../social-messages-locales'
 
 export default {
+  butler: butlerMessages.pt,
   jev: {
     browserAutomation: "Automação do navegador integrado",
     browserAutomationHint: "As avaliações opcionais usam a conexão JEV salva neste perfil a partir da próxima avaliação. Os rótulos visíveis são enviados ao JEV, sem os valores digitados. Quando desativado, indisponível ou incerto, o fluxo original é mantido.",
