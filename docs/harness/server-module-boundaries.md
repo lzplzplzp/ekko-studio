@@ -102,6 +102,7 @@ packages/server/src/
         app-relay.ts
         social-messages.ts
         sessions.ts                 # cross-agent single-chat session management; /api/studio/sessions/*
+        butler.ts                   # butler routing; /api/studio/butler/*
         chat-run.ts
         chat-webhooks.ts            # cross-agent event delivery; /api/studio/webhooks/*
         workflows.ts
@@ -127,6 +128,7 @@ packages/server/src/
         app-relay.ts
         social-messages.ts
         sessions.ts                 # Studio session/history orchestration through injected Agent adapters
+        butler.ts                   # butler intent, registry, and context-pack HTTP
         chat-run.ts
         chat-webhooks.ts
         workflows.ts
@@ -156,6 +158,7 @@ packages/server/src/
         notifications/
         providers/
         sessions/
+        butler/                      # project index, intent routing, session registry, context pack
         social-messages/
         chat-run/                    # shared single-chat lifecycle and persistence
         context-compressor/

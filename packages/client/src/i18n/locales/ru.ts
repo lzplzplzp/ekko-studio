@@ -1,8 +1,10 @@
 import { themePresetMessages } from '../theme-preset-locales'
+import { butlerMessages } from '../butler-locales'
 import { themeAppearanceMessages } from '../theme-appearance-locales'
 import { socialMessagesRu } from '../social-messages-locales'
 
 export default {
+  butler: butlerMessages.ru,
   jev: {
     browserAutomation: "Автоматизация встроенного браузера",
     browserAutomationHint: "Необязательные оценки используют сохранённое подключение JEV этого профиля со следующего запроса. В JEV передаются видимые подписи без введённых значений. При отключении, недоступности или неопределённости сохраняется обычный порядок работы.",

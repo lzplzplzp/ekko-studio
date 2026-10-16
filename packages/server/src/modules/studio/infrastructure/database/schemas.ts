@@ -147,6 +147,24 @@ export const WORKSPACE_DIRECTORIES_INDEXES = {
   idx_workspace_directories_user_recent: 'CREATE INDEX IF NOT EXISTS idx_workspace_directories_user_recent ON workspace_directories(user_id, last_used DESC)',
 }
 
+export const BUTLER_SESSION_REGISTRY_TABLE = 'butler_session_registry'
+export const BUTLER_SESSION_REGISTRY_SCHEMA: Record<string, string> = {
+  session_id: 'TEXT PRIMARY KEY',
+  kind: "TEXT NOT NULL DEFAULT 'chat'",
+  project_key: 'TEXT NOT NULL',
+  env: 'TEXT NOT NULL',
+  tags: "TEXT NOT NULL DEFAULT '[]'",
+  workdir: 'TEXT NOT NULL',
+  last_active_at: 'INTEGER NOT NULL',
+  status: "TEXT NOT NULL DEFAULT 'active'",
+  title: "TEXT NOT NULL DEFAULT ''",
+  group_room_id: "TEXT NOT NULL DEFAULT ''",
+  created_at: 'INTEGER NOT NULL',
+}
+export const BUTLER_SESSION_REGISTRY_INDEXES = {
+  idx_butler_registry_match: 'CREATE INDEX IF NOT EXISTS idx_butler_registry_match ON butler_session_registry(project_key, env, kind, status, last_active_at)',
+}
+
 export const SESSION_CATEGORIES_SCHEMA: Record<string, string> = {
   id: 'INTEGER PRIMARY KEY AUTOINCREMENT',
   name: 'TEXT NOT NULL COLLATE NOCASE',
@@ -1921,6 +1939,11 @@ export function initAllHermesTables(): void {
         idx_gc_room_members_user: 'CREATE INDEX idx_gc_room_members_user ON gc_room_members(userId)',
       }
     })
+
+    syncTable(BUTLER_SESSION_REGISTRY_TABLE, BUTLER_SESSION_REGISTRY_SCHEMA, {
+      indexes: BUTLER_SESSION_REGISTRY_INDEXES,
+    })
+    createIndexes(db, BUTLER_SESSION_REGISTRY_INDEXES)
   } catch (e) {
     console.error('Error initializing Hermes SQLite tables:', e)
     console.error(`[Schema] Database initialization failed. Existing database was left untouched: ${getStoragePath()}`)

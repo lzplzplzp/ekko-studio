@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "projects": [
+    {
+      "projectKey": "value-added/xmglpt",
+      "displayName": "项目管理平台",
+      "aliases": ["项目管理平台", "xmglpt", "old-xmglpt"],
+      "businessLine": "value-added",
+      "workdir": "value-added/xmglpt",
+      "archived": false,
+      "readOnly": true,
+      "tags": ["线上问题", "电子档案"],
+      "agentProfile": "value-added-ops",
+      "groupRoomId": "ops-room-demo",
+      "databases": [
+        {
+          "alias": "xmglpt-prod-ro",
+          "env": "prod-ro",
+          "readOnly": true,
+          "credentialVersion": "demo-2026-10-16",
+          "credentialValidToday": true
+        },
+        {
+          "alias": "xmglpt-test",
+          "env": "test",
+          "readOnly": true,
+          "credentialVersion": "demo-test",
+          "credentialValidToday": false
+        }
+      ]
+    },
+    {
+      "projectKey": "procurement/office-supplies",
+      "displayName": "采购示例",
+      "aliases": ["采购线", "采购项目"],
+      "businessLine": "procurement",
+      "workdir": "procurement/office-supplies",
+      "archived": false,
+      "readOnly": true,
+      "tags": [],
+      "agentProfile": "",
+      "groupRoomId": "",
+      "databases": []
+    }
+  ]
+}

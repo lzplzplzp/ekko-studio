@@ -60,6 +60,26 @@ function handleSidebarClick(event: MouseEvent) {
     <nav class="sidebar-nav">
       <RouteLinkItem
         class="nav-item"
+        :to="{ name: 'hermes.butler' }"
+        :active="selectedKey === 'hermes.butler'"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 3l7 3v6c0 4.5-3 7-7 8-4-1-7-3.5-7-8V6l7-3z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+        <span>{{ t("butler.nav") }}</span>
+      </RouteLinkItem>
+      <RouteLinkItem
+        class="nav-item"
         :to="{ name: 'hermes.logs' }"
         :active="selectedKey === 'hermes.logs'"
       >
